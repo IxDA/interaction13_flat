@@ -1,0 +1,32 @@
+<div class="speaker-screen screen">
+  <article class="speaker gender-${gender}" title="${prefix}${first} ${last}" data-country="${country}" data-session-types="${session_types}" data-gender="${gender}">
+    <hgroup>
+      <h2>${prefix}${first} ${last}</h2>
+    </hgroup>
+    <span title="${prefix}${first} ${last}" class="speaker-thumb gender-${gender}"><img src="/wp-content/themes/ixd13/assets/img/speakers/${src}_280.jpg" width="165" height="165" title="${prefix}${first} ${last}" alt="${prefix}${first} ${last}" /></span>
+    <div class="biography">
+      {{each(i, para) biography}}
+        <p>{{html para}}</p> 
+      {{/each}}
+    </div>
+    {{if session_links}}
+    <div class="sessions">
+      <h6>Session Details</h6>
+      <ul>
+        {{each(entry_id, session_title, session_type) session_links}}
+          <li>${session_type}: <a href="/program/#session-${entry_id}" title="${session_title}" class="session-link" data-c-actions="showSession" data-event-id="${entry_id}">${session_title}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+    
+    <ul class="speaker-links">     
+      {{if twitter}}
+      <li><a href="http://twitter.com/${twitter}" class="twitter" target="_blank">@${twitter}</a></li>
+      {{else}}
+      <li>&nbsp;</li>
+      {{/if}} 
+    </ul>
+    <a href="#" data-c-actions="closeModal" data-selector=".screen" class="close">x</a>
+  </article> 
+</div>

@@ -1,0 +1,21 @@
+footer#content-info {
+  padding-bottom:30px;
+}
+
+#menu-footer-navigation {
+  display:block;
+  margin:0;
+  padding:0;
+  float:left;
+  width:50%;
+  li {
+    display:inline-block;
+    list-style:none;
+    margin:0 10px 0 0;
+    padding:0;
+  }
+}
+.copyright {
+  display:block;
+  float:right;
+}

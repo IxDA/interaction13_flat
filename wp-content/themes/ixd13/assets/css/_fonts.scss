@@ -1,0 +1,9 @@
+$fonts:Regular,Bold,Light;//,Thin,ReclinRegular;
+@each $f in $fonts {
+  @font-face {
+    font-family: 'BrownStd-#{$f}';
+    src: url('BrownStd-#{$f}.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+}

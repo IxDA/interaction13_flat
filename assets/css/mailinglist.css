@@ -1,0 +1,82 @@
+
+/* IMPORTS DEBUG */
+@import url(./bootstrap.css);
+@import url(./bootstrap-responsive.css);
+@import url(./app.css);
+
+
+
+
+/* Modal override */
+.modal-window.session.mailing-list.show {
+	min-height: 300px;
+	max-height: 750px;
+}
+
+
+/* Form definition */
+#frm_mailinglist h2 {
+	margin-right:30px;
+}
+
+#frm_mailinglist .asterisk {
+	color:red;
+}
+
+#frm_mailinglist .indicates-required {
+	text-align:right;
+}
+
+
+/* Fields */
+
+#frm_mailinglist .mc-field-group {
+	width:100%;
+}
+
+#frm_mailinglist .mc-field-group label {
+	font-weight: bolder;
+}
+
+#frm_mailinglist .mc-field-group input[type="text"],
+#frm_mailinglist .mc-field-group input[type="email"]{
+	width:100%;
+	height:2em;	
+}
+
+/* Checkboxs group */
+#frm_mailinglist .mc-field-group.input-group {
+	background-color:#eeeeee;
+	border: 2px solid #d0d0d0;
+	padding:2px;
+}
+
+#frm_mailinglist .mc-field-group.input-group label {
+	font-weight: normal;
+}
+#frm_mailinglist .mc-field-group.input-group label input[type="checkbox"] {
+	margin-top:-4px;	
+	margin-right:4px;
+	
+}
+
+/* Button */
+
+#mce-responses {
+	margin: 10px 0;
+	
+}
+
+#mc-embedded-subscribe.button {
+	Border: 2px solid #A22022;
+	background-color: white;
+	color: #A22022;
+	padding:10px 5px;	
+	text-transform: uppercase;
+	
+}
+
+
+#mc-embedded-subscribe.button:hover {
+	color:#005580;
+}

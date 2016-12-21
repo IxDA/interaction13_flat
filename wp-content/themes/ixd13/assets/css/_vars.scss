@@ -1,0 +1,62 @@
+
+@mixin browser-prop($prop, $style) {
+  $browsers: webkit, moz, msie;//, o;
+  @each $b in $browsers {
+    -#{$b}-#{$prop}:#{$style};
+  }
+  #{$prop}:#{$style};
+}
+
+@mixin transition($duration:0.05, $attr:all, $easing:ease-in-out, $delay:0) {
+  @include browser-prop(transition, $attr #{$duration}s $easing #{$delay}s);
+}
+
+@mixin border-radius($val) {
+  @include browser-prop(border-radius, $val);
+}
+@mixin box-shadow($val) {
+  @include browser-prop(box-shadow, $val);
+}
+
+@mixin opacity($val:1) {
+  opacity:$val;
+  .no-opacity.ie & {
+    filter:alpha(opacity=$val*100);
+  }
+}
+
+@mixin transform($val, $imp:'') {
+  @if $imp!='' { $imp:' ' + $imp; }
+  @include browser-prop(transform, #{$val}#{$imp});
+  .no-csstransforms & {
+    display:none;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content:".";
+    display:block;
+    height:0;
+    font-size:0;
+    line-height:0;
+    clear:both;
+    visibility:hidden;
+  }
+  min-height:1px;
+  height:auto !important;
+  height:1px;
+}
+
+@mixin zeroed {
+  margin:0;
+  padding:0;
+  border:0 none;
+  list-style:none;
+}
+
+@mixin text-replace($display:block) {
+  display:$display;
+  text-indent:-9999px;
+}
+

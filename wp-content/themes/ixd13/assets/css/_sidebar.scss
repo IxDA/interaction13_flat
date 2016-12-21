@@ -1,0 +1,157 @@
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+#sidebar {
+  font-size: 11px;
+  margin-bottom:40px;
+  h3 {
+    float: right;
+    line-height: 20px;
+    padding-top: 5px;
+    padding-right: 15px;
+  }
+  ul {
+    list-style: none outside none;
+    margin: 0px 0px 10px 0px;
+    li {
+      line-height: 15px;
+      margin: 2px 0px;
+      color: rgb(119, 119, 119);
+      border-bottom: 1px solid rgb(192, 192, 192);
+    }
+  }
+}
+
+.sidebarFlair {
+  color: #a22022;
+  font-size: 16px;
+  height: 20px;
+  padding: 20px;
+  text-align: center;
+  /* font-family: 'BrownStd', Verdana, sans-serif; */
+  font-weight: bold;
+  &:before {
+    content: '/ / /';
+  }
+}
+
+.twitter-avatar {
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.twitter-hashtag {
+  color: #a22022;
+}
+
+.intent-meta {
+  line-height: 20px;
+}
+
+.sidebarButton a {
+  margin-bottom: 20px;
+}
+
+/*Sidebar buttons */
+@media (max-width: 979px) {
+  .sidebarButtons {
+    clear:both;
+    text-align:center;
+  }
+  .sidebarButton {
+    display:inline-block;
+  }
+  .sidebarButton a {
+    overflow: hidden;
+    text-indent: -9999px;
+    white-space: nowrap;
+    display: block;
+    height: 60px;
+    width: 170px;
+  }
+  .registerButton a {
+    background: url("../img/icons/sidebarbuttonsprites_165.png") no-repeat 0px 0px;
+    &:hover {
+      background-position: 0px -60px;
+    }
+    &:active {
+      background-position: 0px -120px;
+    }
+  }
+  .volunteerButton a {
+    background: url("../img/icons/sidebarbuttonsprites_165.png") no-repeat -250px 0px;
+    &:hover {
+      background-position: -250px -60px;
+    }
+    &:active {
+      background-position: -250px -120px;
+    }
+  }
+  .sponsorButton a {
+    background: url("../img/icons/sidebarbuttonsprites_165.png") no-repeat -500px 0px;
+    &:hover {
+      background-position: -500px -60px;
+    }
+    &:active {
+      background-position: -500px -120px;
+    }
+  }
+  .contactButton a {
+    background: url("../img/icons/sidebarbuttonsprites_165.png") no-repeat -750px 0px;
+    &:hover {
+      background-position: -750px -60px;
+    }
+    &:active {
+      background-position: -750px -120px;
+    }
+  }
+}
+
+@media (min-width: 980px) {
+  .sidebarButton a {
+    overflow: hidden;
+    text-indent: -9999px;
+    white-space: nowrap;
+    display: block;
+    height: 52px;
+    width: 220px;
+  }
+  .registerButton a {
+    background: url("../img/icons/sidebarbuttonsprites_220.png") no-repeat 0px 0px;
+    &:hover {
+      background-position: 0px -53px;
+    }
+    &:active {
+      background-position: 0px -106px;
+    }
+  }
+  .volunteerButton a {
+    background: url("../img/icons/sidebarbuttonsprites_220.png") no-repeat -220px 0px;
+    &:hover {
+      background-position: -220px -53px;
+    }
+    &:active {
+      background-position: -220px -106px;
+    }
+  }
+  .sponsorButton a {
+    background: url("../img/icons/sidebarbuttonsprites_220.png") no-repeat -439px 0px;
+    &:hover {
+      background-position: -439px -53px;
+    }
+    &:active {
+      background-position: -439px -106px;
+    }
+  }
+  .contactButton a {
+    background: url("../img/icons/sidebarbuttonsprites_220.png") no-repeat -660px 0px;
+    &:hover {
+      background-position: -660px -53px;
+    }
+    &:active {
+      background-position: -660px -106px;
+    }
+  }
+
+}

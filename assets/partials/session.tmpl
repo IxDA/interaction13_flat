@@ -1,0 +1,48 @@
+<div class="session-screen screen">
+  <article data-event-id="${entry_id}" data-title="${session_title}" data-session-type="${session_type}" data-theme="${theme}" class="session ${classes} ${theme}">
+    <header>
+      <hgroup>
+        <h1 class="session-title">${session_title}</h1>
+        {{if sponsored_activity}}
+          {{each sponsors}}
+            <h5>Sponsored by <span>${$value}</span></h5>
+          {{/each}}
+          
+        {{else}}
+          {{if activity}}
+              <cite>${session_type}</cite>
+          {{else}}
+            {{if presenters}}
+              <cite>${session_type} with
+                {{each presenters}}
+                  <a href="/speakers/#${$index}" data-c-actions="showSpeaker" data-speaker-id="${$index}">${$value}</a>
+                {{/each}}
+              </cite>
+          {{/if}}
+            {{/if}}
+        {{/if}}
+      </hgroup>
+      {{if time}}
+      <div class="details">
+        <time>${time}</time>
+        <span class="location">${location}</span><span class="theme">${display_theme}</span>
+      </div>
+      {{/if}}
+    </header>
+    <div class="description">
+      {{each(i, para) description}}
+        <p>{{html para}}</p> 
+      {{/each}}
+    </div>
+    {{if pechakucha}}
+    <h6 class="part-of">Part of the <a href="/program/ocad-reception/">OCAD Reception</a></h6>
+    {{/if}}
+    {{if idea_market}}
+    <h6 class="part-of">Part of the <a href="/program/idea-markets-and-posters/#idea-markets">Idea Markets</a></h6>
+    {{/if}}
+    {{if poster}}
+    <h6 class="part-of">Part of the <a href="/program/idea-markets-and-posters/#posters">Poster Sessions</a></h6>
+    {{/if}}
+    <a href="#" data-c-actions="closeModal" data-selector=".screen" class="close">x</a>
+  </article> 
+</div>

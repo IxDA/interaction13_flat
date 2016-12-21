@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: rgb(119, 119, 119);
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #002846;
+  font-family: 'BrownStd-Regular', Verdana, sans-serif;  //Not just yet, need to initialize @font-face declaration for all BrownStd fonts
+  font-weight:normal;
+}
+
+a {
+  color: #002846;
+}

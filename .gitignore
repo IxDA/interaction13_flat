@@ -1,0 +1,15 @@
+
+#-- Crap hidden files --
+_notes/
+.DS_Store
+.ftpquota
+.sass-cache/
+
+
+#----------------------
+#-- Log files
+#--
+error_log
+*.log
+
+
